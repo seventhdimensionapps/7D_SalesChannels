@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sales_channel_view_tree" model="ir.ui.view">
+            <field name="name">sales.channel.view.tree</field>
+            <field name="model">sales.channel</field>
+            <field name="arch" type="xml">
+                <tree editable="top">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sales_channel_action" model="ir.actions.act_window">
+            <field name="name">Sales Channel</field>
+            <field name="res_model">sales.channel</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_sales_channel" name="Sales Channel" parent="sale.menu_sale_config" action="sales_channel_action" sequence="1"/>
+    </data>
+</odoo>
